@@ -3,15 +3,15 @@ import Card from './Card';
 
 export default function ExecutePassButton({
   passCard,
-  setFrom,
+  // setFrom,
   from,
   to,
   selectedCard,
-  setSelectedCard,
+  // setSelectedCard,
 }) {
   return (
     <div className="execute-button" onClick={() => passCard(selectedCard)}>
-      Pass <Card card={selectedCard} setSelectedCard={setSelectedCard} setFrom={setFrom} /> from{' '}
+      Pass <Card card={selectedCard} />
       {from} to {to}
     </div>
   );
