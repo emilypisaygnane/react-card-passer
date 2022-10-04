@@ -8,11 +8,12 @@ exports.handler = async (event, context) => {
     const data = await response.json();
     const json = JSON.stringify({ data });
     
-    return { 
-      statusCode: 200, 
-      body: json
+    return {
+      statusCode: 200,
+      body: json,
     };
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log(error);
     return {
       statusCode: 500,
